@@ -1,0 +1,9 @@
+connections/DBConnection.class
+tables/ProjectMaterialsTableViewController.class
+tables/ProjectMaterialsTableViewController$Materials.class
+main/User.class
+dialogs/Dialogs.class
+main/Main.class
+tables/EditingStringCell.class
+navigation/NavigationFXMLController.class
+projects/ProjectFXMLController.class

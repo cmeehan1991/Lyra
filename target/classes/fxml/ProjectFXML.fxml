@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.ProjectFXMLController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="840.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutY="29.0" prefHeight="79.0" prefWidth="840.0" style="-fx-background-color: #4d4d4d;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+         <children>
+            <Button fx:id="newProjectButton" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" onAction="#startNewProject" prefHeight="70.0" prefWidth="70.0" text="New Project" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="exportProjectDataButton" layoutX="92.0" layoutY="5.0" mnemonicParsing="false" onAction="#exportProjectData" prefHeight="70.0" prefWidth="70.0" text="Export Project Data" textAlignment="CENTER" wrapText="true" />
+            <Separator layoutX="76.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="16.0" />
+            <Button fx:id="sendProjectButton" layoutX="170.0" layoutY="5.0" mnemonicParsing="false" onAction="#sendProject" prefHeight="70.0" prefWidth="70.0" text="Send Project" textAlignment="CENTER" wrapText="true" />
+            <Separator layoutX="240.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="16.0" />
+            <Button fx:id="saveButton" layoutX="256.0" layoutY="5.0" mnemonicParsing="false" onAction="#saveProject" prefHeight="70.0" prefWidth="70.0" text="Save" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+      <Label layoutX="14.0" layoutY="122.0" text="Project ID" />
+      <TextField fx:id="projectIdTextField" layoutX="82.0" layoutY="117.0" prefHeight="27.0" prefWidth="86.0" />
+      <ComboBox fx:id="projectVersionComboBox" layoutX="175.0" layoutY="117.0" prefHeight="27.0" prefWidth="70.0" />
+      <TabPane layoutY="144.0" prefHeight="393.0" prefWidth="895.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="149.0">
+        <tabs>
+          <Tab text="Summary">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="867.0" vgap="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="92.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="203.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="84.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="181.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="62.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="174.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Project Name:*" />
+                              <TextField fx:id="projectNameTextField" GridPane.columnIndex="1" />
+                              <Label text="Project Type:*" GridPane.columnIndex="2" />
+                              <ComboBox fx:id="projectTypeComboBox" prefHeight="27.0" prefWidth="179.0" GridPane.columnIndex="3" />
+                              <Label text="Manager(s):" GridPane.columnIndex="4" />
+                              <CheckComboBox fx:id="projectManagersCheckComboBox" prefWidth="177.0" GridPane.columnIndex="5" />
+                           </children>
+                        </GridPane>
+                        <GridPane hgap="5.0" layoutX="14.0" layoutY="53.0" prefHeight="243.0" prefWidth="869.0" vgap="5.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="131.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="566.0" minWidth="10.0" prefWidth="95.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="603.0" minWidth="10.0" prefWidth="95.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="79.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" prefWidth="458.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TitledPane animated="false" collapsible="false" text="Status" GridPane.rowSpan="4">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="114.0">
+                                       <children>
+                                          <GridPane layoutY="14.0" prefHeight="90.0" prefWidth="155.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <RadioButton fx:id="statusBid" mnemonicParsing="false" text="In Bid">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="projectStatusGroup" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="statusPending" mnemonicParsing="false" selected="true" text="Pending" toggleGroup="$projectStatusGroup" GridPane.rowIndex="1" />
+                                                <RadioButton fx:id="statusInProgress" mnemonicParsing="false" text="In Progress" toggleGroup="$projectStatusGroup" GridPane.rowIndex="2" />
+                                                <RadioButton fx:id="statusComplete" mnemonicParsing="false" text="Complete" toggleGroup="$projectStatusGroup" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <Label text="Employees" GridPane.columnIndex="1" />
+                              <ListView fx:id="projectEmployeesListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+                              <Button fx:id="addEmployeeButton" mnemonicParsing="false" onAction="#addEmployee" text="+" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" />
+                              <Button fx:id="removeSelectedEmployeeButton" mnemonicParsing="false" onAction="#removeEmployee" text="-" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                              <TextArea fx:id="projectNotesTextArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+                              <Label text="Notes" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="materials" text="Materials">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="projectMaterialsTableView" editable="true" layoutY="4.0" prefHeight="314.0" prefWidth="895.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="addMaterialButton" layoutX="14.0" layoutY="314.0" mnemonicParsing="false" onAction="#addProjectMaterial" text="+" />
+                        <Button fx:id="removeSelectedMaterialsButton" layoutX="47.0" layoutY="314.0" mnemonicParsing="false" onAction="#removeProjectMaterial" text="-" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Project Notes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="projectNotesTableView" editable="true" layoutX="6.0" prefHeight="323.0" prefWidth="895.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="addNoteButton" layoutX="6.0" layoutY="333.0" mnemonicParsing="false" onAction="#addProjectNote" text="+" />
+                        <Button fx:id="removeNoteButton" layoutX="41.0" layoutY="333.0" mnemonicParsing="false" onAction="#removeProjectNote" text="-" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="saveButton" layoutX="706.0" layoutY="550.0" mnemonicParsing="false" onAction="#saveProjectOpenNew" text="Save &amp; New" />
+      <Button fx:id="saveButton" layoutX="601.0" layoutY="550.0" mnemonicParsing="false" onAction="#saveProjectClose" text="Save &amp; Close" />
+      <Button layoutX="828.0" layoutY="550.0" mnemonicParsing="false" onAction="#closeProject" text="Cancel" />
+      <ComboBox fx:id="clientComboBox" layoutX="642.0" layoutY="117.0" prefHeight="27.0" prefWidth="239.0" />
+      <Label layoutX="601.0" layoutY="122.0" text="Client" />
+      <Button fx:id="searchForProject" layoutX="252.0" layoutY="117.0" mnemonicParsing="false" text="..." />
+      <Separator layoutX="798.0" layoutY="543.0" orientation="VERTICAL" prefHeight="37.0" prefWidth="30.0" />
+   </children>
+</AnchorPane>

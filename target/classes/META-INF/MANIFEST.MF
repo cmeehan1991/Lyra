@@ -1,0 +1,66 @@
+Manifest-Version: 1.0
+Implementation-Title: ControlsFX
+Bundle-Description: High quality UI controls and other tools to comple
+ ment the core JavaFX distribution
+Bundle-SymbolicName: org.controlsfx
+Implementation-Version: 8.40.12
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1473127885000
+Specification-Title: Java Version 8 Update 40
+Import-Package: com.sun.javafx.collections,com.sun.javafx.css,com.sun.
+ javafx.css.converters,com.sun.javafx.event,com.sun.javafx.runtime,com
+ .sun.javafx.scene.control,com.sun.javafx.scene.control.behavior,com.s
+ un.javafx.scene.control.skin,com.sun.javafx.scene.text,com.sun.javafx
+ .scene.traversal,com.sun.javafx.webkit,com.sun.webkit,javafx.animatio
+ n,javafx.application,javafx.beans,javafx.beans.binding,javafx.beans.p
+ roperty,javafx.beans.value,javafx.collections,javafx.collections.tran
+ sformation,javafx.concurrent,javafx.css,javafx.event,javafx.geometry,
+ javafx.scene,javafx.scene.chart,javafx.scene.control,javafx.scene.con
+ trol.cell,javafx.scene.image,javafx.scene.input,javafx.scene.layout,j
+ avafx.scene.media,javafx.scene.paint,javafx.scene.shape,javafx.scene.
+ text,javafx.scene.transform,javafx.scene.web,javafx.stage,javafx.util
+ ,javafx.util.converter,javax.swing,javax.swing.table
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
+Export-Package: org.controlsfx.control;uses:="javafx.beans.property,ja
+ vafx.beans.value,javafx.collections,javafx.concurrent,javafx.css,java
+ fx.event,javafx.geometry,javafx.scene,javafx.scene.control,javafx.sce
+ ne.image,javafx.scene.input,javafx.scene.layout,javafx.scene.paint,ja
+ vafx.stage,javafx.util,org.controlsfx.control.action,org.controlsfx.p
+ roperty.editor",org.controlsfx.control.action;uses:="javafx.beans,jav
+ afx.beans.property,javafx.collections,javafx.event,javafx.scene,javaf
+ x.scene.control,javafx.scene.input,org.controlsfx.control",org.contro
+ lsfx.control.cell;uses:="javafx.scene.image,javafx.scene.media,javafx
+ .scene.paint,org.controlsfx.control",org.controlsfx.control.decoratio
+ n;uses:="javafx.collections,javafx.geometry,javafx.scene",org.control
+ sfx.control.spreadsheet;uses:="javafx.beans.property,javafx.collectio
+ ns,javafx.event,javafx.scene,javafx.scene.control,javafx.util,javafx.
+ util.converter",org.controlsfx.control.table;uses:="javafx.beans.prop
+ erty,javafx.collections,javafx.collections.transformation,javafx.scen
+ e,javafx.scene.control,javafx.util",org.controlsfx.control.table.mode
+ l,org.controlsfx.control.textfield;uses:="javafx.beans.property,javaf
+ x.event,javafx.scene,javafx.scene.control,javafx.util",org.controlsfx
+ .dialog;uses:="javafx.beans.property,javafx.collections,javafx.concur
+ rent,javafx.scene,javafx.scene.control,javafx.scene.text,javafx.util"
+ ,org.controlsfx.glyphfont;uses:="javafx.beans.property,javafx.scene.c
+ ontrol,javafx.scene.paint,org.controlsfx.tools",org.controlsfx.proper
+ ty;uses:="javafx.beans.value,javafx.collections,org.controlsfx.contro
+ l,org.controlsfx.property.editor",org.controlsfx.property.editor;uses
+ :="javafx.beans.value,javafx.scene,javafx.util,org.controlsfx.control
+ ",org.controlsfx.tools;uses:="javafx.beans.value,javafx.scene,javafx.
+ scene.control,javafx.scene.layout,javafx.scene.paint,javafx.stage,jav
+ afx.util",org.controlsfx.validation;uses:="javafx.beans.property,java
+ fx.scene.control,org.controlsfx.validation.decoration",org.controlsfx
+ .validation.decoration;uses:="javafx.scene,javafx.scene.control,org.c
+ ontrolsfx.control.decoration,org.controlsfx.validation"
+Bundle-Name: ControlsFX
+Bundle-Version: 8.40.12
+Private-Package: impl.build.transifex,impl.org.controlsfx,impl.org.con
+ trolsfx.autocompletion,impl.org.controlsfx.behavior,impl.org.controls
+ fx.i18n,impl.org.controlsfx.skin,impl.org.controlsfx.spreadsheet,impl
+ .org.controlsfx.table,impl.org.controlsfx.tools,impl.org.controlsfx.t
+ ools.rectangle,impl.org.controlsfx.tools.rectangle.change,impl.org.co
+ ntrolsfx.version
+Created-By: 1.8.0_66 (Oracle Corporation)
+Specification-Version: 8.40.12
+
