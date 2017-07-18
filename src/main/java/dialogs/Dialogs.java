@@ -11,6 +11,7 @@ import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import static javafx.scene.control.Alert.AlertType.WARNING;
 import static javafx.scene.control.ButtonBar.ButtonData.OK_DONE;
 import javafx.scene.control.ButtonType;
@@ -174,5 +175,21 @@ public class Dialogs {
         });
 
         return loginSet;
+    }
+    
+    /**
+     * Show a information dialog
+     * 
+     * @param title
+     * @param headerText
+     * @param content 
+     * @return  
+     */
+    public Alert notificationDialog(String title, String headerText, String content){
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
+        alert.setContentText(content);
+        return alert;
     }
 }

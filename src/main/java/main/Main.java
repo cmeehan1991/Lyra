@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This software is name after the Lyra constellation discovered by Ptolemy.
+ * Redistribution of this software is not authorized.  
  */
 package main;
 
